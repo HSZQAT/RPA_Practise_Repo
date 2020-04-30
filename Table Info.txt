@@ -1,0 +1,54 @@
++-----------------+
+| Tables_in_game  |
++-----------------+
+| customer        |
+| orders          |
+| orders_products |
+| products        |
++-----------------+
+
+DESCRIBE customer;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| CID        | int          | NO   | PRI | NULL    |       |
+| first_name | varchar(32)  | NO   |     | NULL    |       |
+| last_name  | varchar(32)  | NO   |     | NULL    |       |
+| address    | varchar(150) | NO   |     | NULL    |       |
+| email      | varchar(320) | NO   |     | NULL    |       |
+| phone      | varchar(10)  | YES  |     | N/A     |       |
+| loyalty    | tinyint(1)   | NO   |     | 0       |       |
+| postcode   | char(10)     | NO   |     | NULL    |       |
+| age        | int          | YES  |     | 0       |       |
+| city       | varchar(32)  | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+
+DESCRIBE orders;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| OID   | int  | NO   | PRI | NULL    |       |
+| CID   | int  | NO   | MUL | NULL    |       |
++-------+------+------+-----+---------+-------+
+
+DESCRIBE orders_products;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| OID   | int  | NO   | MUL | NULL    |       |
+| PID   | int  | NO   | MUL | NULL    |       |
++-------+------+------+-----+---------+-------+
+
+DESCRIBE products;
++--------------+--------------+------+-----+------------+-------+
+| Field        | Type         | Null | Key | Default    | Extra |
++--------------+--------------+------+-----+------------+-------+
+| PID          | int          | NO   | PRI | NULL       |       |
+| name         | varchar(128) | NO   |     | NULL       |       |
+| price        | decimal(6,2) | NO   |     | NULL       |       |
+| category     | varchar(32)  | NO   |     | NULL       |       |
+| age_rating   | varchar(4)   | NO   |     | NULL       |       |
+| quantity     | int          | NO   |     | NULL       |       |
+| platform     | varchar(32)  | NO   |     | NULL       |       |
+| release_date | date         | YES  |     | 2000-01-01 |       |
++--------------+--------------+------+-----+------------+-------+
