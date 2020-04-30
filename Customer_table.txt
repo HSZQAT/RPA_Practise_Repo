@@ -1,0 +1,10 @@
+
+Customer Table
++-----+------------+-----------+----------------+---------------------------+-----------+---------+-----------+------+------------+
+| CID | first_name | last_name | address        | email                     | phone     | loyalty | postcode  | age  | city       |
++-----+------------+-----------+----------------+---------------------------+-----------+---------+-----------+------+------------+
+|   1 | Helena     | Szw       | My House       | helena@helena.com         | 123456789 |       1 | PO5T C0D3 |   25 | Manchester |
+|   2 | Anna       | Anno      | Anna's House   | anna@anna.com             | 987654331 |       0 | P05T VR7E |  751 | Manchester |
+|   3 | Billy      | Billson   | Billy's House  | billy@billy.com           | 982347    |       1 | P05T 7ET1 |   32 | Glasgow    |
+|   4 | Carol      | Baskin    | Big Cat Rescue | carolcat@bigcatrescue.com | N/A       |       0 | P05T 9EM7 |   58 | Tampa      |
++-----+------------+-----------+----------------+---------------------------+-----------+---------+-----------+------+------------+
